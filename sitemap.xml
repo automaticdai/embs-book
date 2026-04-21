@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://automaticdai.github.io/embs-book/</loc>
+         <lastmod>2026-04-21</lastmod>
+    </url>
+    <url>
+         <loc>https://automaticdai.github.io/embs-book/getting-started/how-to-use/</loc>
+         <lastmod>2026-04-21</lastmod>
+    </url>
+    <url>
+         <loc>https://automaticdai.github.io/embs-book/getting-started/overview/</loc>
+         <lastmod>2026-04-21</lastmod>
+    </url>
+    <url>
+         <loc>https://automaticdai.github.io/embs-book/hw-sw-codesign/design-space-exploration/</loc>
+         <lastmod>2026-04-21</lastmod>
+    </url>
+    <url>
+         <loc>https://automaticdai.github.io/embs-book/hw-sw-codesign/introduction/</loc>
+         <lastmod>2026-04-21</lastmod>
+    </url>
+    <url>
+         <loc>https://automaticdai.github.io/embs-book/hw-sw-codesign/mapping/</loc>
+         <lastmod>2026-04-21</lastmod>
+    </url>
+    <url>
+         <loc>https://automaticdai.github.io/embs-book/hw-sw-codesign/partitioning/</loc>
+         <lastmod>2026-04-21</lastmod>
+    </url>
+    <url>
+         <loc>https://automaticdai.github.io/embs-book/tutorials/kl-algorithm/</loc>
+         <lastmod>2026-04-21</lastmod>
+    </url>
+</urlset>
