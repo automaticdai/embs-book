@@ -1,43 +1,44 @@
+---
+hide:
+  - toc
+---
+
+<div class="book-intro" markdown>
+
+<p class="book-eyebrow">University of York · EMBS</p>
+
 # Embedded Systems Design and Implementation
 
-Welcome to the **EMBS Book** — a companion resource for the Embedded Systems Design and Implementation (EMBS) module at the **University of York**.
+A companion to the EMBS module. Explore the principles of embedded systems, the trade-offs between hardware and software, and the algorithms that bring them together.
 
----
+<p class="book-byline">Dr Steven Xiaotian Dai · Department of Computer Science</p>
 
-## About This Module
+[Start with the module overview →](getting-started/overview.md)
 
-This module covers the principles and practices of designing and implementing embedded systems, with a focus on hardware/software co-design, system partitioning, real-time constraints, and practical implementation techniques.
+</div>
 
-!!! info "Module Leader"
-    **Dr Steven Xiaotian Dai**
-    Department of Computer Science, University of York
+<div class="book-contents" markdown>
 
-For practicals, please check this [page](https://iangray001.github.io/embs/docs/practicals/).
+## Getting started
 
----
+- [Module overview](getting-started/overview.md) — Aims, learning outcomes, and module structure
+- [How to use this book](getting-started/how-to-use.md) — Navigation and conventions
 
-## Contents
+## Hardware/software co-design
 
-### [Getting Started](getting-started/overview.md)
+1. [Introduction](hw-sw-codesign/introduction.md) — Principles and the design process
+2. [Design space exploration](hw-sw-codesign/design-space-exploration.md) — Trade-offs and Pareto analysis
+3. [Partitioning](hw-sw-codesign/partitioning.md) — Dividing work between hardware and software
+4. [Mapping](hw-sw-codesign/mapping.md) — Assigning tasks to computing resources
 
-Module overview, learning outcomes, and how to use this book.
+## Interactive tutorials
 
-- [Module Overview](getting-started/overview.md) — Aims, learning outcomes, and module structure
-- [How to Use This Book](getting-started/how-to-use.md) — Navigation guide and conventions
+- [Kernighan–Lin algorithm](tutorials/kl-algorithm.md) — Move nodes and step through graph partitioning
 
-### [HW/SW Co-Design](hw-sw-codesign/introduction.md)
+</div>
 
-Hardware/software co-design principles, partitioning strategies, and interactive tutorials.
+## Practical work and resources
 
-- [Introduction](hw-sw-codesign/introduction.md) — What is HW/SW co-design and why it matters
-- [Design Space Exploration](hw-sw-codesign/design-space-exploration.md) — Multi-objective optimisation and Pareto analysis
-- [Partitioning](hw-sw-codesign/partitioning.md) — Partitioning algorithms including Kernighan-Lin
-- [Mapping](hw-sw-codesign/mapping.md) — Task-to-resource mapping in platform-based design
-- [Interactive: KL Algorithm](tutorials/kl-algorithm.md) — Step through the KL algorithm visually
+Follow the [practical exercises](https://iangray001.github.io/embs/docs/practicals/) alongside your reading.
 
----
-
-## Quick Links
-
-- [GitHub Repository](https://github.com/automaticdai/embs-book)
-- [University of York — Computer Science](https://www.york.ac.uk/computer-science/)
+[Department of Computer Science](https://www.york.ac.uk/computer-science/) · [GitHub repository](https://github.com/automaticdai/embs-book)

@@ -12,32 +12,35 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: blue
+      primary: teal
+      accent: teal
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: blue
+      primary: teal
+      accent: teal
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
   font:
-    text: Roboto
+    text: Inter
     code: Roboto Mono
   features:
     - navigation.instant
     - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
-    - navigation.expand
     - navigation.top
+    - navigation.footer
     - toc.follow
     - search.suggest
     - search.highlight
     - content.code.copy
   icon:
+    logo: material/chip
     repo: fontawesome/brands/github
 
 plugins:
@@ -60,7 +63,11 @@ markdown_extensions:
   - toc:
       permalink: true
 
+extra_css:
+  - stylesheets/extra.css
+
 extra_javascript:
+  - javascripts/external-links.js
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
@@ -81,4 +88,6 @@ nav:
     - Design Space Exploration: hw-sw-codesign/design-space-exploration.md
     - Partitioning: hw-sw-codesign/partitioning.md
     - Mapping: hw-sw-codesign/mapping.md
-    - "Interactive: KL Algorithm": tutorials/kl-algorithm.md
+  - Interactive Tutorials:
+    - Kernighan–Lin Algorithm: tutorials/kl-algorithm.md
+  - Practicals: https://iangray001.github.io/embs/docs/practicals/

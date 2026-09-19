@@ -37,9 +37,9 @@ This interactive tutorial lets you explore the **Kernighan-Lin (KL) graph partit
 
 ## Interactive Tutorial
 
-<a href="../../kl_interactive.html" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; margin-bottom: 12px; padding: 6px 14px; border-radius: 6px; background: #eff6ff; border: 1px solid #bfdbfe; color: #1d4ed8; font-size: 0.85rem; font-weight: 500; text-decoration: none;">&#x2197; Open in new window</a>
+<a href="../../kl_interactive.html" target="_blank" rel="noopener" class="md-button">&#x2197; Open in new window</a>
 
-<iframe src="../../kl_interactive.html" width="100%" height="1600" frameborder="0" style="border: 1px solid #e2e8f0; border-radius: 8px;"></iframe>
+<iframe src="../../kl_interactive.html" title="Interactive Kernighan–Lin graph partitioning tutorial" class="tutorial-frame" width="100%" height="1600" loading="lazy"></iframe>
 
 ---
 

@@ -48,7 +48,23 @@ button:disabled{opacity:.3;cursor:not-allowed}
 .chw{display:inline-block;padding:1px 5px;border-radius:3px;background:#f5f3ff;border:1px solid #ddd6fe;color:#6d28d9;font-size:.65rem;font-weight:700}
 .conv{background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:.65rem 1rem;color:#15803d;font-size:.8rem;font-weight:600;margin-bottom:1rem;display:none}
 .noim{background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:.65rem 1rem;color:#b91c1c;font-size:.78rem;margin-bottom:1rem;display:none}
-@media(max-width:680px){.layout{flex-direction:column}.stats{min-width:unset;width:100%}}
+/* Keep the graph usable within the book column and on small screens. */
+html{font-size:125%}
+body{max-width:1200px;margin:0 auto;background:#fafbf9}
+h1{color:#183c32;letter-spacing:-.025em;line-height:1.25}
+.sub,.ct,.phint{color:#52665e}
+.sub{line-height:1.6;letter-spacing:.08em}
+.instr{border-left-color:#0f766e;background:#edf5f1}
+.instr strong{color:#115e59}
+.card,.psect,.lsect,canvas{border-color:#d9e4df;box-shadow:none;border-radius:12px}
+.graph-wrap{max-width:100%}
+canvas{max-width:100%;height:auto;touch-action:none}
+.bp{background:#115e59;border-color:#115e59}
+.bp:hover:not(:disabled){background:#0f766e}
+button{min-height:40px}
+button:focus-visible,#optLabel:focus-within{outline:3px solid #0f766e;outline-offset:3px}
+.psect{overflow-x:auto}
+@media(max-width:680px){body{padding:.75rem}.layout{flex-direction:column}.stats{min-width:unset;width:100%}.lentry{flex-wrap:wrap}}
 </style>
 </head>
 <body>
