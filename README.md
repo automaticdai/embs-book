@@ -2,16 +2,16 @@
 
 Embedded Systems Design and Implementation (EMBS) Module at the University of York.
 
-**Website**: [https://automaticdai.github.io/embs-book/](https://automaticdai.github.io/embs-book/)
+**Website**: [https://embs-book.github.io/](https://embs-book.github.io/)
 
 ## Development
 
-This site is built with [MkDocs](https://www.mkdocs.org/) and the [Material for MkDocs](https://squidfun.github.io/mkdocs-material/) theme.
+This site is built with [MkDocs](https://www.mkdocs.org/) and the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
 
 ### Local preview
 
 ```bash
-pip install mkdocs-material
+pip install -r requirements.txt
 mkdocs serve
 ```
 
@@ -24,6 +24,8 @@ The site deploys automatically to GitHub Pages via GitHub Actions on push to `ma
 ## Contents
 
 - **Getting Started** — Module overview and how to use this book
-- **HW/SW Co-Design** — Introduction to hardware/software co-design and partitioning
+- **HW/SW Co-Design** — Introduction, design space exploration, partitioning and mapping
 - **Interactive Tutorials**
-  - [Kernighan-Lin Algorithm](https://automaticdai.github.io/embs-book/tutorials/kl-algorithm/)
+  - [Kernighan-Lin Algorithm](https://embs-book.github.io/tutorials/kl-algorithm/)
+  - [Diffusion Load Balancing](https://embs-book.github.io/tutorials/diffusion-algorithm/)
+  - [PDA vs QPA](https://embs-book.github.io/tutorials/pda-qpa/)

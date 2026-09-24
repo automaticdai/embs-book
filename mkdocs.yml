@@ -1,10 +1,10 @@
 site_name: EMBS Book
 site_description: Embedded Systems Design and Implementation (EMBS) Module at the University of York
 site_author: Dr Steven Xiaotian Dai
-site_url: https://automaticdai.github.io/embs-book/
+site_url: https://embs-book.github.io/
 
-repo_name: automaticdai/embs-book
-repo_url: https://github.com/automaticdai/embs-book
+repo_name: embs-book/embs-book.github.io
+repo_url: https://github.com/embs-book/embs-book.github.io
 
 theme:
   name: material
@@ -74,7 +74,7 @@ extra_javascript:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/automaticdai/embs-book
+      link: https://github.com/embs-book/embs-book.github.io
 
 copyright: Copyright &copy; Dr Steven Xiaotian Dai, University of York
 
@@ -90,4 +90,6 @@ nav:
     - Mapping: hw-sw-codesign/mapping.md
   - Interactive Tutorials:
     - Kernighan–Lin Algorithm: tutorials/kl-algorithm.md
+    - Diffusion Load Balancing: tutorials/diffusion-algorithm.md
+    - PDA vs QPA: tutorials/pda-qpa.md
   - Practicals: https://iangray001.github.io/embs/docs/practicals/

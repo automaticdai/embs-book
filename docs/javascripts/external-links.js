@@ -1,8 +1,11 @@
 // Material's instant navigation replaces page content without a full reload.
 document$.subscribe(function () {
-  const practicals = "https://iangray001.github.io/embs/docs/practicals/";
+  // Header repo widget and footer social icons are self-evidently external.
+  const skip = ".md-source, .md-social";
 
-  document.querySelectorAll(`a[href="${practicals}"]`).forEach(function (link) {
+  document.querySelectorAll('a[href^="http"]').forEach(function (link) {
+    if (link.hostname === location.hostname || link.closest(skip)) return;
+
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.title = "Opens in a new tab";

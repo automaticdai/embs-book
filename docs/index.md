@@ -34,6 +34,8 @@ A companion to the EMBS module. Explore the principles of embedded systems, the 
 ## Interactive tutorials
 
 - [Kernighan–Lin algorithm](tutorials/kl-algorithm.md) — Move nodes and step through graph partitioning
+- [Diffusion load balancing](tutorials/diffusion-algorithm.md) — Watch load flow between neighbouring nodes until it evens out
+- [PDA vs QPA](tutorials/pda-qpa.md) — Compare two exact EDF schedulability tests on random task sets
 
 </div>
 
@@ -41,4 +43,4 @@ A companion to the EMBS module. Explore the principles of embedded systems, the 
 
 Follow the [practical exercises](https://iangray001.github.io/embs/docs/practicals/) alongside your reading.
 
-[Department of Computer Science](https://www.york.ac.uk/computer-science/) · [GitHub repository](https://github.com/automaticdai/embs-book)
+[Department of Computer Science](https://www.york.ac.uk/computer-science/) · [GitHub repository](https://github.com/embs-book/embs-book.github.io)

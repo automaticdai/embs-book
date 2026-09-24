@@ -1,3 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diffusion algorithm — interactive tutorial</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f5f4ef;
+  --color-background-tertiary: #eeece5;
+  --color-text-primary: #1a1a18;
+  --color-text-secondary: #5f5e5a;
+  --color-text-info: #185FA5;
+  --color-border-tertiary: rgba(0,0,0,0.15);
+  --color-border-secondary: rgba(0,0,0,0.30);
+  --color-border-info: #378ADD;
+  --color-flow-in: #085041;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background-primary: #232321;
+    --color-background-secondary: #2d2d2a;
+    --color-background-tertiary: #1a1a18;
+    --color-text-primary: #ebe9e0;
+    --color-text-secondary: #b4b2a9;
+    --color-text-info: #85B7EB;
+    --color-border-tertiary: rgba(255,255,255,0.15);
+    --color-border-secondary: rgba(255,255,255,0.30);
+    --color-border-info: #85B7EB;
+    --color-flow-in: #5DCAA5;
+  }
+}
+</style>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 .dw{font-family:var(--font-sans);width:100%;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden;display:flex;flex-direction:column;background:var(--color-background-primary)}
@@ -20,7 +58,7 @@
 .dt td{padding:4px 3px;border-bottom:0.5px solid var(--color-border-tertiary);color:var(--color-text-primary);vertical-align:middle}
 .dt tr:last-child td{border-bottom:none}
 .sw{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle}
-.du{color:#BA7517}.dd{color:#0F6E56}.dz{color:var(--color-text-secondary)}
+.du{color:#BA7517}.dd{color:var(--color-flow-in)}.dz{color:var(--color-text-secondary)}
 .cbg{height:4px;background:var(--color-background-secondary);border-radius:2px;overflow:hidden;margin-top:5px}
 .cfill{height:100%;background:#1D9E75;border-radius:2px;transition:width .45s ease}
 .cmeta{display:flex;justify-content:space-between;font-size:10px;font-family:var(--font-mono);color:var(--color-text-secondary);margin-top:4px}
@@ -32,7 +70,20 @@
 .dctrls{display:flex;align-items:center;gap:6px;padding:8px 12px;border-top:0.5px solid var(--color-border-tertiary);background:var(--color-background-secondary);flex-shrink:0;flex-wrap:wrap}
 button{height:28px;padding:0 11px;font-size:12px;font-weight:500;cursor:pointer;border-radius:var(--border-radius-md);font-family:var(--font-sans)}
 .csep{flex:1}
+body{background:var(--color-background-tertiary);color:var(--color-text-primary);font-family:var(--font-sans);padding:12px}
+button{background:var(--color-background-primary);color:var(--color-text-primary);border:0.5px solid var(--color-border-secondary)}
+button:hover:not(:disabled){border-color:var(--color-border-info)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible{outline:2px solid var(--color-border-info);outline-offset:2px}
+.dsvg{touch-action:none}
+@media (max-width:640px){
+  .dmain{flex-direction:column;height:auto}
+  .dgraph{height:300px;flex:none}
+  .dinfo{width:auto;border-left:none;border-top:0.5px solid var(--color-border-tertiary)}
+}
 </style>
+</head>
+<body>
 
 <div class="dw">
   <div class="dtopbar">
@@ -74,7 +125,7 @@ button{height:28px;padding:0 11px;font-size:12px;font-weight:500;cursor:pointer;
           <div class="leg-item"><div class="leg-dot" style="background:#BA7517"></div>mid load</div>
           <div class="leg-item"><div class="leg-dot" style="background:#993C1D"></div>high load</div>
           <div class="leg-item"><div class="leg-line" style="background:#BA7517"></div>flow out</div>
-          <div class="leg-item"><div class="leg-line" style="background:#085041"></div>flow in</div>
+          <div class="leg-item"><div class="leg-line" style="background:var(--color-flow-in)"></div>flow in</div>
         </div>
       </div>
       <div class="isec">
@@ -132,7 +183,7 @@ const NODE_TEXT='white';
 
 // Flow colors: amber (load flowing out = positive) and teal (load flowing in = negative)
 const FLOW_OUT='#BA7517'; // amber-600
-const FLOW_IN ='#085041'; // teal-800
+const FLOW_IN =getComputedStyle(document.documentElement).getPropertyValue('--color-flow-in').trim()||'#085041';
 const FLOW_NIL='#94a3b8';
 
 function flowCol(f){return f>0.004?FLOW_OUT:f<-0.004?FLOW_IN:FLOW_NIL;}
@@ -329,7 +380,7 @@ function stopAuto(){
   document.getElementById('bauto').textContent='▷ Auto';
 }
 
-svg.addEventListener('mousedown',e=>{
+svg.addEventListener('pointerdown',e=>{
   const g=e.target.closest('[data-nid]');
   if(!g)return;
   dragId=parseInt(g.dataset.nid);
@@ -338,14 +389,14 @@ svg.addEventListener('mousedown',e=>{
   dragOy=(e.clientY-r.top)*(VH/r.height)-nodes[dragId].y;
   e.preventDefault();
 });
-document.addEventListener('mousemove',e=>{
+document.addEventListener('pointermove',e=>{
   if(dragId===null)return;
   const r=svg.getBoundingClientRect();
   nodes[dragId].x=Math.max(NR+4,Math.min(VW-NR-4,(e.clientX-r.left)*(VW/r.width)-dragOx));
   nodes[dragId].y=Math.max(NR+4,Math.min(VH-NR-4,(e.clientY-r.top)*(VH/r.height)-dragOy));
   render();
 });
-document.addEventListener('mouseup',()=>{dragId=null;});
+document.addEventListener('pointerup',()=>{dragId=null;});
 
 document.getElementById('bprev').onclick=()=>{stopAuto();goPrev();};
 document.getElementById('bnext').onclick=()=>{stopAuto();goNext();};
@@ -356,3 +407,5 @@ document.getElementById('brand').onclick=()=>{stopAuto();randomize();render();};
 setDefault();
 render();
 </script>
+</body>
+</html>

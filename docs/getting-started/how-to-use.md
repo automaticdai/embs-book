@@ -23,6 +23,8 @@ Throughout this book, you'll find interactive tutorials that let you explore alg
 Current interactive tutorials:
 
 - [**Kernighan-Lin Algorithm**](../tutorials/kl-algorithm.md) — Step through the KL graph partitioning algorithm
+- [**Diffusion Load Balancing**](../tutorials/diffusion-algorithm.md) — Step through iterative load diffusion on a graph
+- [**PDA vs QPA**](../tutorials/pda-qpa.md) — Compare Processor Demand Analysis with Quick convergence Processor-demand Analysis
 
 ---
 
@@ -53,4 +55,4 @@ int main() {
 
 ## Feedback
 
-If you find any errors or have suggestions for improvement, please open an issue on the [GitHub repository](https://github.com/automaticdai/embs-book/issues).
+If you find any errors or have suggestions for improvement, please open an issue on the [GitHub repository](https://github.com/embs-book/embs-book.github.io/issues).
