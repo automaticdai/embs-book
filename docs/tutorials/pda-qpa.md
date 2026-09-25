@@ -41,9 +41,9 @@ The chart plots $h(t)$ against the line $y = t$. PDA testing points are shown as
 
 ## Interactive Explorer
 
-<a href="../../pda_qpa_explorer.html" target="_blank" rel="noopener" class="md-button">&#x2197; Open in new window</a>
+<a href="../embeds/pda-qpa.html" target="_blank" rel="noopener" class="md-button">&#x2197; Open in new window</a>
 
-<iframe src="../../pda_qpa_explorer.html" title="Interactive PDA vs QPA schedulability explorer" class="tutorial-frame" width="100%" height="1600" loading="lazy"></iframe>
+<iframe src="../embeds/pda-qpa.html" title="Interactive PDA vs QPA schedulability explorer" class="tutorial-frame" width="100%" height="1600" loading="lazy"></iframe>
 
 ---
 

@@ -40,9 +40,9 @@ Edge labels and arrows show how much load flows along each edge, and in which di
 
 ## Interactive Tutorial
 
-<a href="../../diffusion_algorithm_tutorial.html" target="_blank" rel="noopener" class="md-button">&#x2197; Open in new window</a>
+<a href="../embeds/diffusion-algorithm.html" target="_blank" rel="noopener" class="md-button">&#x2197; Open in new window</a>
 
-<iframe src="../../diffusion_algorithm_tutorial.html" title="Interactive diffusion load balancing tutorial" class="tutorial-frame" width="100%" height="520" loading="lazy"></iframe>
+<iframe src="../embeds/diffusion-algorithm.html" title="Interactive diffusion load balancing tutorial" class="tutorial-frame" width="100%" height="520" loading="lazy"></iframe>
 
 ---
 

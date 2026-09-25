@@ -24,7 +24,12 @@ The site deploys automatically to GitHub Pages via GitHub Actions on push to `ma
 ## Contents
 
 - **Getting Started** — Module overview and how to use this book
+- **Embedded Systems Design** — Characteristics, design metrics and the design process
+- **Specification** — Requirements and models of computation
 - **HW/SW Co-Design** — Introduction, design space exploration, partitioning and mapping
+- **Real-Time Operating Systems** — Tasks, scheduling and kernel services
+- **Real-Time Scheduling** — Task models, scheduling policies and schedulability tests
+- **Multicore and Resource Sharing** — Resource access protocols and multicore scheduling
 - **Interactive Tutorials**
   - [Kernighan-Lin Algorithm](https://embs-book.github.io/tutorials/kl-algorithm/)
   - [Diffusion Load Balancing](https://embs-book.github.io/tutorials/diffusion-algorithm/)
