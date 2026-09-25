@@ -21,13 +21,12 @@ By the end of this module, students will be able to:
 
 ## Module Structure
 
-1. Embedded Systems Design
-2. Embedded Systems Specification
+1. [Embedded Systems Design](../embedded-systems-design/introduction.md)
+2. [Embedded Systems Specification](../specification/introduction.md)
 3. [Software-Hardware Co-Design](../hw-sw-codesign/introduction.md)
-4. Real-Time Operating Systems
-5. Real-Time Scheduling
-6. Resource Sharing
-7. Mixed-Criticality Systems
+4. [Real-Time Operating Systems](../rtos/introduction.md)
+5. [Real-Time Scheduling](../real-time-scheduling/introduction.md)
+6. [Multicore and Resource Sharing](../multicore-resource-sharing/introduction.md)
 
 ---
 
